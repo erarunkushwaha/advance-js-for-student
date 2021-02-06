@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- tradational way of concatination -->
+    <script>
+        let user = "Arun Kushwaha";
+        document.write("hello " + user + " how are you <br>");
+    </script>
+
+    <!-- ES6 way of concatination -->
+    <script>
+        let userb = "Arun Kushwaha";
+        document.write(`hello  ${userb} how are you <br>`);
+    </script>
+
+<!-- multiple variable concatination -->
+<script>
+    let user3 = "Pankaj Kushwaha";
+    let mark = 34;
+    document.write(`Name = ${user3} mark = ${mark}`);
+</script>
+<br>
+<script>
+    let user4 = "Rabin";
+    let mark2 = 45;
+    let result = `Name = ${user4} and makr = ${mark2} <br>`;
+    document.write(result);
+
+    // using "" and '' in variable;
+    let result2 = `Name = "${user4}" and 'makr' = ${mark2} <br>`;
+    document.write(result2);
+    // Breaking statement in multiple line
+    // use console to check it
+    let result3 = `Name = "${user4}" 
+                and
+     'makr' = ${mark2} <br>`;
+    console.log(result3);
+</script>
+<br>
+
+<!-- calling function in statement -->
+<script>
+    function fullname(fname,lname){
+        return `${fname} ${lname}`
+    }
+    let greet2 = `Hello ${fullname('Ravi','Kushwaha')}`;
+    document.write(greet2);
+</script>
+</body>
+
+</html>
