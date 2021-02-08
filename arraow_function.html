@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <title>Document</title>
+    <!-- Tradational way for fuction -->
+    <script>
+        let hello = function(name){
+            return `Hello & Welcome ${name}`;
+        }
+        console.log(hello('Arun Kushwaha'));
+    </script>
+
+    <!-- function in ES6 in multiline -->
+    <script>
+        let info = (name,age) => {
+            let ageInString = `And age is ${age}`;
+            return  `Name is ${name}-${ageInString}`;
+        }
+        console.log(info('Ravi',43));
+    </script>
+
+    <!-- for single line code in function -->
+    <script>
+        let intro = (name,level) => `Name is ${name} and class is ${level}`;
+        console.log(intro('Rabin','+2'));
+    </script>
+
+    <!-- for one parameter in function -->
+    <script>
+        let greet = name => `Welcome ${name}`;
+        console.log(greet('Sunny'));
+        console.log(typeof greet);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
