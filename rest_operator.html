@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- before rest operator to handel multiple arguments -->
+    <!-- if any string value is passed in argumrnts then it converts all arguments value to string -->
+        <script>
+        function sum(){
+            let sum = 0;
+            for(let i in arguments){
+                sum += arguments[i];
+            }
+            console.log(sum);
+
+        }
+        sum(10,20,30);
+        sum(10,20,30,40,50,60);
+        </script>
+
+        <!-- Rest operator -->
+        <!-- to handel string in arguments -->
+        <script>
+            function sum2(name,level,...marks){
+                let totalMark = 0;
+                for(let i in marks){
+                    totalMark += marks[i];
+                }
+                console.log(name);
+                console.log(level);
+                console.log(totalMark);
+            }
+            sum2('Arun Kushwaha','DCOM',10,20,30,40,50,60);
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
