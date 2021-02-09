@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Spread operator help to pass array as multiple arguments for rest operator -->
+    <script>
+        function sum(name,level,...marks){
+            let totalMark = 0;
+            for(let i in marks){
+                totalMark += marks[i];
+            }
+            console.log(name);
+            console.log(level);
+            console.log(totalMark);
+        }
+        let markInArray = [10,20,30,40];
+        sum('Arun Kushwaha','DCOM',...markInArray);
+    </script>
+
+    <script>
+        let arr2 = [10,20,30,40];
+        // convert array into individual integer
+        console.log(...arr2);
+
+        // again covert into array
+        console.log([...arr2]);
+    </script>
+
+<!-- to concact or merge array -->
+    <script>
+        let arra4 = [10,20,30,50];
+        let array5 = [60,70,80];
+        let arra6 = [...arra4,...array5];
+        let arra7 = [...arra4,...array5,90,100];
+        console.log(arra6);
+        console.log(arra7);
+    </script>
+
+    <!-- to concact or merge object -->
+    <script>
+        let obj1 = {
+            name : 'Arun Kushwaha',
+            level : 'DCOM'
+        };
+        let obj2 = {
+            collage: 'oxford',
+            roll : 45
+        };
+        let obj3 = {...obj1,...obj2};
+        console.log(obj3);
+
+        let obj4 = {...obj1,...obj2,section:'happy'};
+        console.log(obj4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
