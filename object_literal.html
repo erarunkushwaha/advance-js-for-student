@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- before ES6  -->
+    <script>
+        let name = "Arun Kushwaha";
+        let course = "DCOM";
+
+        let obj1 = {
+            name : name,
+            course: course,
+        };
+        console.log(obj1);
+    </script>
+
+    <!-- after ES6 -->
+    <!-- if name of property and name of value is same then -->
+    <script>
+        let name2 = "Ravi";
+        let Course2 = "Batchelor in It";
+        let obj2 = {
+            name2,
+            Course2
+        };
+        console.log(obj2);
+    </script>
+
+    <!-- using Variable name as property -->
+    <script>
+        let n = "name";
+        let obj3 = {
+            // name will be assign as property in the place of [n]
+            [n] : "Arun is the  master",
+            course : "DCOM2"
+        };
+        console.log(obj3);
+    </script>
+
+    <!-- using arthematic operation in property -->
+    <script>
+        let n2 = "student";
+        let obj4 = {
+            [n2 + "name"] : "Pankaj Kushwaha",
+            course : "Hotel Management"
+        };
+        console.log(obj4);
+    </script>
+
+    <!-- using function inside the property -->
+    <script>
+        let n3 = "student";
+        let obj5 = {
+            [n2 + "name"] : "Ravi Kushwaha",
+            course : "Civil Engineering",
+            detail : function(){
+                return `${this.studentname} is the student of ${this.course}`
+            }
+        };
+        console.log(obj5);
+        console.log(obj5.detail());
+    </script>
+
+    <!-- object literals new function syntax -->
+
+    <!-- before ES6 -->
+    <script>
+        let obj6 = {
+            name : "Arun Kushwaha",
+            show: function(){
+                console.log(this.name);
+            }
+        };
+        obj6.show();
+        // new method to call function in ES6
+        obj6['show']();
+        console.log(obj6);
+    </script>
+<!-- after ES6 -->
+<script>
+    let obj7 = {
+        name : "tARUN Kushwaha",
+        course : 'Software Engineering',
+        show(){
+            console.log(this.name);
+        },
+        'full detail'(){
+            console.log(this.name + "is student of "+ this.course);
+        },
+        'new detail'(){
+            return `${this.name} is a student ${this.course}`;
+        }
+    };
+    obj7.show();
+    obj7['full detail']();
+    obj7['show']();
+    console.log(obj7['new detail']());
+    console.log(obj7);
+</script>
+
+<!-- return object from function -->
+<script>
+    let fname = "Arun";
+    let lname = "Kuswhaha";
+    let studycourse = "Hotel Management";
+    function fullname(fname,lname,studycourse){
+        let name = fname + " " + lname;
+        return {name,studycourse}
+    }
+    console.log(fullname(fname,lname,studycourse));
+    // for single value
+    let testname = fullname(fname,lname,studycourse);
+    console.log(testname.name);
+</script>
+<body>
+    
+</body>
+</html>
